@@ -17,6 +17,9 @@ layout: default
     {% endif %}
     <div class="prose">
       {{ content }}
+      {% if page.event_link %}
+        <p><a class="btn btn-outline" href="{{ page.event_link }}" target="_blank" rel="noopener">Event listing ↗</a></p>
+      {% endif %}
       {% if page.rsvp_link and page.rsvp_link != "" %}
         <p><a class="btn btn-red" href="{{ page.rsvp_link }}">RSVP</a></p>
       {% endif %}

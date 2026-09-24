@@ -21,7 +21,7 @@ Look for `[brackets]` and `TODO` comments. Those are placeholders waiting for re
 
 ### Add an event
 
-1. Copy any file in `_events/`, e.g. `science-trivia.md` → `fall-trivia-2026.md`.
+1. Copy any file in `_events/`, e.g. `science-smackdown-2025.md` → `science-smackdown-2026.md`.
 2. Update the fields at the top:
    ```yaml
    title: Fall Science Trivia

@@ -270,6 +270,8 @@ u, .hero-link {
 .prose h3 { font-weight: 800; font-size: 24px; margin: 32px 0 10px; }
 .prose a { color: var(--red); font-weight: 700; text-underline-offset: 3px; }
 .prose a.btn { color: var(--white); }
+.prose a.btn-outline { color: var(--ink); }
+.prose a.btn-outline:hover { color: var(--white); }
 .prose ul:not(.pillars):not(.team) { padding-left: 1.2em; }
 .prose li::marker { color: var(--red); }
 .prose strong { font-weight: 800; }
