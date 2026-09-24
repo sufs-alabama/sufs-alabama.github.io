@@ -36,6 +36,9 @@ healthy, employed, and curious.
   </li>
 </ul>
 
+{% comment %}
+OUR TEAM: delete this comment wrapper (the two lines with "comment") to show the team section.
+
 ## Our team
 
 <!-- TODO: add organizers. Copy one <li> per person; photos go in assets/img/team/ -->
@@ -56,6 +59,7 @@ healthy, employed, and curious.
     <p>[Role · Institution or city]</p>
   </li>
 </ul>
+{% endcomment %}
 
 ## Get involved
 

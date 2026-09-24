@@ -432,3 +432,40 @@ button.gallery-item:hover { transform: translateY(-4px); }
 .social-footer a { background: #2a2a2a; }
 .social-footer a:hover { background: var(--red); }
 .copyright { margin-top: 44px; font-size: 14px; color: #8a857b; }
+
+/* ---------- Hero poster (used until a hero photo is added) ---------- */
+.hero-poster {
+  display: flex; flex-direction: column; justify-content: center;
+  min-height: clamp(340px, 34vw, 460px); background: var(--navy); color: var(--white);
+  text-decoration: none; border-radius: var(--radius); overflow: hidden; position: relative;
+  padding: clamp(24px, 4vw, 48px) clamp(24px, 4vw, 48px) 0;
+  transition: transform .18s ease;
+}
+.hero-poster:hover { transform: translateY(-4px); }
+.hero-poster::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(255,255,255,.08) 1.4px, transparent 1.6px);
+  background-size: 12px 12px;
+}
+.hero-poster > span { position: relative; }
+.poster-kicker { font-weight: 800; text-transform: uppercase; letter-spacing: .16em; font-size: 14px; color: #9fc3d6; }
+.poster-num { font-weight: 900; font-size: clamp(96px, 14vw, 180px); line-height: .85; letter-spacing: -.04em; margin-top: 12px; }
+.poster-label { font-weight: 800; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.1; max-width: 16ch; margin: 12px 0 auto; }
+.poster-strip {
+  margin: 24px calc(-1 * clamp(24px, 4vw, 48px)) 0;
+  background: var(--red); padding: 16px clamp(24px, 4vw, 48px) 14px;
+  font-weight: 800; text-transform: uppercase; letter-spacing: .08em; font-size: 15px;
+}
+
+/* Text-only event cards (no photo yet) */
+.event-card.no-media { border-top: 10px solid var(--red); }
+.event-card.no-media.event-navy { border-top-color: var(--navy); }
+.event-card.no-media.event-ink { border-top-color: var(--ink); }
+.event-card.no-media.event-cream { border-top-color: var(--red); }
+.event-feature.no-media { background: var(--red); color: var(--white); border-top: 0; }
+.event-feature.no-media .event-body { padding: clamp(28px, 4vw, 48px); }
+.event-feature.no-media .event-meta,
+.event-feature.no-media h3 a,
+.event-feature.no-media .text-link { color: var(--white); }
+.event-feature.no-media .tag-cream { background: var(--white); }
+.event-feature.no-media .tag-outline { border-color: var(--white); color: var(--white); }

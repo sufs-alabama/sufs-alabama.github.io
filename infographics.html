@@ -4,5 +4,10 @@ title: Infographics
 eyebrow: Save them, share them
 lede: Graphics from Stand Up for Science Alabama. Tap any one to see it full size.
 ---
-{% include gallery.html %}
-{% include lightbox.html %}
+{% assign graphics = site.data.infographics | where_exp: "g", "g.image" %}
+{% if graphics.size > 0 %}
+  {% include gallery.html %}
+  {% include lightbox.html %}
+{% else %}
+  <p>Our latest graphics are on <a class="text-link" href="{{ site.social.instagram }}" target="_blank" rel="noopener">Instagram ↗</a></p>
+{% endif %}

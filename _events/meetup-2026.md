@@ -3,8 +3,8 @@ title: SUFS Alabama Meetup 2026
 category: meetup
 upcoming: true          # shows the "Upcoming" tag; set to false once it has happened
 date: 2026-11-01        # TODO: real date
-date_display: "[Date to be announced]"
-location: "[Venue], [City], AL"
+date_display: "Date coming soon"
+location: "Alabama"            # TODO: venue + city
 placeholder_text: "2026"
 rsvp_link: ""           # paste an RSVP form link to show the RSVP button
 summary: >-

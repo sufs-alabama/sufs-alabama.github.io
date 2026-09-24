@@ -2,7 +2,7 @@
 permalink: /events/
 title: Events
 eyebrow: Where we've shown up
-lede: Rallies, trivia nights, talks, and the 2026 statewide meetup.
+lede: Rallies, trivia nights, and the 2026 statewide meetup.
 ---
 {% assign meetup = site.events | where: "category", "meetup" | first %}
 {% assign events_sorted = site.events | sort: "date" | reverse %}
@@ -10,7 +10,10 @@ lede: Rallies, trivia nights, talks, and the 2026 statewide meetup.
 <div class="filters" role="group" aria-label="Filter events">
   <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
   {% for c in site.data.categories %}
+    {% assign in_cat = site.events | where: "category", c[0] %}
+    {% if in_cat.size > 0 %}
     <button class="filter" data-filter="{{ c[0] }}" aria-pressed="false">{{ c[1].label }}</button>
+    {% endif %}
   {% endfor %}
 </div>
 

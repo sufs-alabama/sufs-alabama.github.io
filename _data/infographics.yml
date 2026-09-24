@@ -1,16 +1,10 @@
-# Your infographics gallery.
+# Your infographics gallery. The Infographics page and its menu link stay
+# hidden until at least one entry with an `image` is added here.
 # 1. Put the image in assets/img/infographics/
-# 2. Add an entry below (newest first). Delete the example placeholders.
+# 2. Add an entry (newest first), removing the [] below:
 #
 # - title: Why NIH funding matters in Alabama
 #   image: /assets/img/infographics/nih-funding.png
-#   alt: Chart showing ...          # describe what the graphic says
+#   alt: Describe what the graphic shows
 #   caption: Shared for the March rally.
-#   date: 2025-03-01
-
-- title: Your infographic here
-  placeholder: red
-- title: Your infographic here
-  placeholder: navy
-- title: Your infographic here
-  placeholder: cream
+[]

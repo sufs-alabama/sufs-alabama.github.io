@@ -1,13 +1,11 @@
 {%- assign e = include.event -%}
 {%- assign cat = site.data.categories[e.category] -%}
-<article class="event-card{% if include.feature %} event-feature{% endif %}" data-category="{{ e.category }}"{% if include.feature %} id="meetup"{% endif %}>
+<article class="event-card event-{{ cat.color }}{% if include.feature %} event-feature{% endif %}{% unless e.image %} no-media{% endunless %}" data-category="{{ e.category }}"{% if include.feature %} id="meetup"{% endif %}>
+  {% if e.image %}
   <a class="event-media-link" href="{{ e.url | relative_url }}" tabindex="-1" aria-hidden="true">
-    {% if e.image %}
-      <img class="event-media" src="{{ e.image | relative_url }}" alt="" loading="lazy">
-    {% else %}
-      <span class="event-media placeholder tone-{{ cat.color }}"><span>{{ e.placeholder_text | default: cat.label }}</span></span>
-    {% endif %}
+    <img class="event-media" src="{{ e.image | relative_url }}" alt="" loading="lazy">
   </a>
+  {% endif %}
   <div class="event-body">
     <p class="event-tags"><span class="tag tag-{{ cat.color }}">{{ cat.label }}</span>{% if e.upcoming %} <span class="tag tag-outline">Upcoming</span>{% endif %}</p>
     <h3><a href="{{ e.url | relative_url }}">{{ e.title }}</a></h3>
