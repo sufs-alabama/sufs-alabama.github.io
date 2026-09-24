@@ -1,0 +1,16 @@
+<div class="gallery">
+  {% for g in site.data.infographics limit: include.limit %}
+    {% if g.image %}
+      <figure class="gallery-figure">
+        <button class="gallery-item" data-full="{{ g.image | relative_url }}">
+          <img src="{{ g.image | relative_url }}" alt="{{ g.alt | default: g.title | escape }}" loading="lazy">
+        </button>
+        <figcaption><strong>{{ g.title }}</strong>{% if g.caption %} {{ g.caption }}{% endif %}</figcaption>
+      </figure>
+    {% else %}
+      <figure class="gallery-figure">
+        <div class="gallery-item placeholder tone-{{ g.placeholder | default: 'red' }}"><span>{{ g.title }}</span></div>
+      </figure>
+    {% endif %}
+  {% endfor %}
+</div>

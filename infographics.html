@@ -1,0 +1,13 @@
+---
+permalink: /infographics/
+title: Infographics
+eyebrow: Save them, share them
+lede: Science in Alabama at a glance.
+---
+<div class="fact-grid">
+  {% for f in site.data.facts %}{% include fact.html fact=f %}{% endfor %}
+</div>
+
+<h2 class="sub-title">Our graphics</h2>
+{% include gallery.html %}
+{% include lightbox.html %}

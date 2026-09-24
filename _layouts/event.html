@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{% assign cat = site.data.categories[page.category] %}
+<article class="event-page">
+  <header class="page-hero">
+    <div class="wrap">
+      <a class="back-link" href="{{ '/events/' | relative_url }}">← All events</a>
+      <p><span class="tag tag-{{ cat.color }}">{{ cat.label }}</span>{% if page.upcoming %} <span class="tag tag-outline">Upcoming</span>{% endif %}</p>
+      <h1 class="page-title">{{ page.title }}</h1>
+      <p class="event-meta">{% include event-date.html event=page %}{% if page.location %} · {{ page.location }}{% endif %}</p>
+    </div>
+  </header>
+  <div class="wrap event-page-body">
+    {% if page.image %}
+      <img class="event-page-image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}">
+    {% endif %}
+    <div class="prose">
+      {{ content }}
+      {% if page.rsvp_link and page.rsvp_link != "" %}
+        <p><a class="btn btn-red" href="{{ page.rsvp_link }}">RSVP</a></p>
+      {% endif %}
+    </div>
+    {% if page.gallery %}
+      <div class="gallery">
+        {% for photo in page.gallery %}
+          <button class="gallery-item" data-full="{{ photo.src | relative_url }}">
+            <img src="{{ photo.src | relative_url }}" alt="{{ photo.alt | escape }}" loading="lazy">
+          </button>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</article>
+{% include lightbox.html %}

@@ -1,0 +1,18 @@
+# "Science in Alabama" fact graphics shown on the home and infographics pages.
+# icon = rocket | dna | medical | river   color = red | navy | ink | cream
+- title: Rocket City
+  icon: rocket
+  color: red
+  text: Huntsville is home to NASA's Marshall Space Flight Center, where America's heavy-lift rockets are designed and tested.
+- title: Genomics hub
+  icon: dna
+  color: navy
+  text: HudsonAlpha Institute for Biotechnology turns genetic research into diagnoses, treatments, and new companies.
+- title: Medicine at work
+  icon: medical
+  color: cream
+  text: UAB is Alabama's largest single employer, and research keeps its academic medical center running.
+- title: Biodiversity hotspot
+  icon: river
+  color: ink
+  text: Alabama's rivers hold some of the richest freshwater biodiversity in North America, and scientists track it every season.

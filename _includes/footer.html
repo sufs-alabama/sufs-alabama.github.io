@@ -1,0 +1,16 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="{{ '/' | relative_url }}">{% include logo.html %}<span class="sr-only">{{ site.title }} home</span></a>
+      <p>An Alabama chapter of the <a href="{{ site.national_site }}" target="_blank" rel="noopener">Stand Up for Science</a> movement.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="{{ '/who-we-are/' | relative_url }}">Who We Are</a>
+      <a href="{{ '/events/' | relative_url }}">Events</a>
+      <a href="{{ '/infographics/' | relative_url }}">Infographics</a>
+      <a href="{{ '/events/#meetup' | relative_url }}">2026 Meetup</a>
+    </nav>
+    {% include social.html class="social-footer" %}
+  </div>
+  <p class="wrap copyright">© {{ site.time | date: "%Y" }} {{ site.title }}</p>
+</footer>

@@ -1,0 +1,12 @@
+{%- assign f = include.fact -%}
+<figure class="fact fact-{{ f.color }}">
+  <div class="fact-icon" aria-hidden="true">
+    {%- case f.icon -%}
+    {%- when "rocket" -%}<svg viewBox="0 0 64 64"><path d="M32 4c8 10 12 22 12 34H20c0-12 4-24 12-34z"/><path d="M20 38l-8 10h10zM44 38l8 10H42z"/><path d="M26 44h12l-2 10h-8z"/></svg>
+    {%- when "dna" -%}<svg viewBox="0 0 64 64" fill="none" stroke="currentColor"><path d="M20 6c0 18 24 18 24 26S20 44 20 58" stroke-width="5"/><path d="M44 6c0 18-24 18-24 26s24 12 24 26" stroke-width="5"/><path d="M24 16h16M24 48h16" stroke-width="4"/></svg>
+    {%- when "medical" -%}<svg viewBox="0 0 64 64"><path d="M26 6h12v20h20v12H38v20H26V38H6V26h20z"/></svg>
+    {%- when "river" -%}<svg viewBox="0 0 64 64"><path d="M4 40c8-8 14-8 20 0s12 8 20 0 14-8 16-4v20H4z"/><circle cx="46" cy="16" r="8"/></svg>
+    {%- endcase -%}
+  </div>
+  <figcaption><strong>{{ f.title }}</strong>{{ f.text }}</figcaption>
+</figure>

@@ -1,0 +1,14 @@
+# Event categories. The key (rally, trivia, ...) is what you put in an
+# event's `category:` field. color = red | navy | ink | cream
+rally:
+  label: Rally
+  color: red
+trivia:
+  label: Science Trivia
+  color: navy
+speaking:
+  label: Moments & Speaking
+  color: ink
+meetup:
+  label: 2026 Meetup
+  color: cream

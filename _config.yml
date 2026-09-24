@@ -1,0 +1,53 @@
+# ------------------------------------------------------------
+# Stand Up for Science Alabama — site settings
+# Most day-to-day edits happen in:
+#   _events/            one Markdown file per event
+#   _data/infographics.yml
+#   _data/facts.yml
+#   who-we-are.md
+# ------------------------------------------------------------
+
+title: Stand Up for Science Alabama
+short_title: SUFS Alabama
+description: >-
+  Alabamians standing up for science, research, public health, and the people
+  who make discovery possible.
+url: "https://sufs-alabama.github.io"
+baseurl: ""
+
+# Red bar across the top of every page. Set `announcement:` to "" to hide it.
+announcement: "Save the date: the SUFS Alabama 2026 Meetup is coming. Details soon!"
+announcement_link: "/events/#meetup"
+
+# Contact + socials (leave a value blank "" to hide that icon)
+email: ""            # e.g. hello@yourdomain.org
+social:
+  instagram: ""      # full profile URLs
+  bluesky: ""
+  facebook: ""
+  tiktok: ""
+national_site: "https://www.standupforscience.net/"
+
+# Call-to-action button in the header
+header_cta_label: "Get Involved"
+header_cta_link: "/#get-involved"
+
+# Show upcoming (future-dated) events like the 2026 meetup
+future: true
+
+collections:
+  events:
+    output: true
+    permalink: /events/:name/
+
+defaults:
+  - scope: { path: "", type: events }
+    values: { layout: event }
+  - scope: { path: "" }
+    values: { layout: page }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

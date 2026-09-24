@@ -1,0 +1,16 @@
+# Your infographics gallery.
+# 1. Put the image in assets/img/infographics/
+# 2. Add an entry below (newest first). Delete the example placeholders.
+#
+# - title: Why NIH funding matters in Alabama
+#   image: /assets/img/infographics/nih-funding.png
+#   alt: Chart showing ...          # describe what the graphic says
+#   caption: Shared for the March rally.
+#   date: 2025-03-01
+
+- title: Your infographic here
+  placeholder: red
+- title: Your infographic here
+  placeholder: navy
+- title: Your infographic here
+  placeholder: cream
