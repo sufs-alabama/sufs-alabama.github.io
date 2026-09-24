@@ -111,8 +111,11 @@ title: Home
       {% if site.email and site.email != "" %}
         <a class="btn btn-white" href="mailto:{{ site.email }}">Email us</a>
       {% endif %}
+      {% if site.social.linktree and site.social.linktree != "" %}
+        <a class="btn btn-white" href="{{ site.social.linktree }}" target="_blank" rel="noopener">All our links</a>
+      {% endif %}
       {% if site.social.instagram and site.social.instagram != "" %}
-        <a class="btn btn-white" href="{{ site.social.instagram }}" target="_blank" rel="noopener">Follow on Instagram</a>
+        <a class="btn btn-outline-light" href="{{ site.social.instagram }}" target="_blank" rel="noopener">Follow on Instagram</a>
       {% endif %}
       <a class="btn btn-outline-light" href="{{ '/events/' | relative_url }}">Come to an event</a>
       <a class="btn btn-outline-light" href="{{ site.national_site }}" target="_blank" rel="noopener">National movement ↗</a>
