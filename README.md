@@ -13,7 +13,7 @@ The site rebuilds automatically in a minute or two.
 | Red announcement bar, email, social links | `_config.yml` |
 | The "Who We Are" page and team | `who-we-are.md` |
 | An event | the matching file in `_events/` |
-| The "Science in Alabama" fact cards | `_data/facts.yml` |
+| Press coverage on the Media page | `_data/media.yml` |
 | The infographics gallery | `_data/infographics.yml` + images in `assets/img/infographics/` |
 | Home page text | `index.html` |
 
@@ -38,6 +38,19 @@ Photos go in `assets/img/events/`. Add a photo gallery to an event with:
 gallery:
   - src: /assets/img/events/rally-1.jpg
     alt: Crowd holding signs on the capitol steps
+```
+
+### Add press coverage
+
+Add an entry to `_data/media.yml`:
+```yaml
+- title: Headline of the story
+  outlet: AL.com
+  date: 2026-03-07
+  type: article          # article | video | listing
+  url: https://...
+  summary: One sentence about the piece.
+  # youtube_id: abc123   # for YouTube videos: embeds the player
 ```
 
 ### Add an infographic

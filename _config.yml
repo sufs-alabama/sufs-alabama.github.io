@@ -22,7 +22,7 @@ announcement_link: "/events/#meetup"
 # Contact + socials (leave a value blank "" to hide that icon)
 email: ""            # e.g. hello@yourdomain.org
 social:
-  instagram: ""      # full profile URLs
+  instagram: "https://www.instagram.com/standupforsciencealabama/"   # full profile URLs
   bluesky: ""
   facebook: ""
   tiktok: ""

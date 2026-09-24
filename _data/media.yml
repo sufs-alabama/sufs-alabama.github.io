@@ -1,0 +1,40 @@
+# Press coverage shown on the Media page (newest first).
+# type: article | video | listing
+# Add your own press, interviews, podcasts, and op-eds the same way.
+
+- title: "'Stand Up for Science' holds National Day of Action"
+  outlet: WBRC FOX6 News
+  date: 2026-03-07
+  type: article
+  url: https://www.wbrc.com/2026/03/07/stand-up-science-holds-national-day-action/
+  summary: Coverage of the 2026 Rally to Take Back Science, with Birmingham among the rally locations.
+
+- title: "'Our futures are at stake': UAB students, scientists join Stand up for Science rally"
+  outlet: ABC 33/40
+  date: 2025-03-07
+  type: article
+  url: https://abc3340.com/news/local/our-futures-are-at-stake-uab-students-scientists-join-stand-up-for-science-rally-nih-federal-funding-cuts
+  summary: UAB students and researchers at the Birmingham rally on what NIH funding cuts would mean for their work.
+
+- title: "'Our futures are at stake': UAB students, scientists join Stand up for Science rally"
+  outlet: ABC 33/40 (video)
+  date: 2025-03-07
+  type: video
+  url: https://www.youtube.com/watch?v=1v6ZidqAv4I
+  youtube_id: 1v6ZidqAv4I
+  summary: The TV segment from the 2025 Birmingham rally.
+
+- title: "Taking It to the Streets: Scientists Mobilize to Fight Trump's 'Unprecedented' Anti-Science Agenda"
+  outlet: Inside Climate News
+  date: 2025-03-07
+  type: article
+  url: https://insideclimatenews.org/news/07032025/stand-up-for-science-rallies-against-trump-anti-science-agenda/
+  summary: National coverage featuring the roughly 500 people who rallied at Birmingham's Railroad Park.
+
+- title: "Stand Up for Science rallies planned for Friday around U.S. How to attend one in Alabama"
+  outlet: Yahoo News
+  date: 2025-03-05          # approximate; used for ordering only
+  date_display: March 2025
+  type: listing
+  url: https://www.yahoo.com/news/stand-science-rallies-planned-friday-190608625.html
+  summary: Preview of the Birmingham rally at Railroad Park and its "Ask a Scientist" panel.

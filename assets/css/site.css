@@ -371,18 +371,28 @@ u, .hero-link {
 .tone-ink { background: var(--ink); color: var(--white); }
 .tone-cream { background: var(--cream-deep); color: var(--red); }
 
-/* ---------- Facts / infographics ---------- */
-.fact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 20px; }
-.fact { margin: 0; border-radius: var(--radius); padding: 28px 26px 30px; display: flex; flex-direction: column; gap: 18px; }
-.fact-icon svg { width: 52px; height: 52px; fill: currentColor; }
-.fact figcaption { font-size: 17px; line-height: 1.45; }
-.fact figcaption strong { display: block; font-weight: 800; font-size: 28px; line-height: 1.05; margin-bottom: 10px; letter-spacing: -.01em; }
-.fact-red { background: var(--red); color: var(--white); }
-.fact-navy { background: var(--navy); color: var(--white); }
-.fact-ink { background: var(--ink); color: var(--white); }
-.fact-cream { background: var(--white); color: var(--ink); box-shadow: inset 0 0 0 2px var(--ink); }
-.fact-cream .fact-icon { color: var(--red); }
+/* ---------- Media ---------- */
+.media-list { display: grid; gap: 18px; }
+.media-list-compact { grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 24px; }
+.media-item { background: var(--white); border-radius: var(--radius); overflow: hidden; border-left: 8px solid var(--red); display: flex; flex-direction: column; }
+.media-body { padding: 24px 28px 26px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.media-outlet { margin: 0; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; font-size: 14px; color: var(--red); }
+.media-outlet span { color: var(--muted); letter-spacing: .04em; font-weight: 700; }
+.media-item h3 { margin: 0; font-size: clamp(22px, 2.4vw, 28px); line-height: 1.15; font-weight: 800; letter-spacing: -.01em; }
+.media-item h3 a { text-decoration: none; }
+.media-item h3 a:hover { color: var(--red); }
+.media-item p { margin: 0; }
+.media-item .text-link { margin-top: auto; padding-top: 6px; }
+.media-list-compact .media-item h3 { font-size: 22px; }
+.media-videos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 24px; }
+.media-video { aspect-ratio: 16 / 9; background: var(--ink); }
+.media-video iframe { width: 100%; height: 100%; border: 0; display: block; }
+.media-note { margin-top: 72px; background: var(--navy); color: var(--white); border-radius: var(--radius); padding: 32px 36px; }
+.media-note h2 { margin: 0 0 8px; font-size: 30px; font-weight: 800; }
+.media-note p { margin: 0; max-width: 680px; }
+.media-note a { color: var(--white); font-weight: 700; }
 
+/* ---------- Infographics gallery ---------- */
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 24px; }
 .gallery-figure { margin: 0; }
 .gallery-figure figcaption { margin-top: 10px; font-size: 16px; color: var(--muted); }

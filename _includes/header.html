@@ -8,9 +8,9 @@
       <nav id="site-nav" class="site-nav" aria-label="Main">
         <a href="{{ '/who-we-are/' | relative_url }}"{% if page.url == '/who-we-are/' %} aria-current="page"{% endif %}>Who We Are</a>
         <a href="{{ '/events/' | relative_url }}"{% if page.url contains '/events/' %} aria-current="page"{% endif %}>Events</a>
+        <a href="{{ '/media/' | relative_url }}"{% if page.url == '/media/' %} aria-current="page"{% endif %}>Media</a>
         <a href="{{ '/infographics/' | relative_url }}"{% if page.url == '/infographics/' %} aria-current="page"{% endif %}>Infographics</a>
         <a href="{{ '/events/#meetup' | relative_url }}">2026 Meetup</a>
-        <a href="{{ site.national_site }}" target="_blank" rel="noopener">National SUFS ↗</a>
       </nav>
       <div class="header-actions">
         {% include social.html class="social-header" %}
