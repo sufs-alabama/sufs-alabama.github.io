@@ -268,9 +268,7 @@ u, .hero-link {
 /* Pillars (Who we are) */
 .pillars, .team { list-style: none; padding: 0; margin: 24px 0; }
 .pillars { display: grid; gap: 16px; }
-.pillars li { background: var(--white); border-radius: var(--radius); padding: 22px 26px; border-left: 8px solid var(--red); box-shadow: 0 1px 0 rgba(20,20,20,.06); }
-.pillars li:nth-child(2) { border-left-color: var(--navy); }
-.pillars li:nth-child(3) { border-left-color: var(--ink); }
+.pillars li { background: var(--white); border-radius: var(--radius); padding: 22px 26px; box-shadow: 0 1px 0 rgba(20,20,20,.06); }
 .pillar-num { font-weight: 800; color: var(--red); letter-spacing: .1em; font-size: 14px; }
 .pillars h3 { margin: 2px 0 6px; font-size: 26px; }
 .pillars p { margin: 0; }
@@ -365,7 +363,7 @@ u, .hero-link {
 /* ---------- Media ---------- */
 .media-list { display: grid; gap: 18px; }
 .media-list-compact { grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 24px; }
-.media-item { background: var(--white); border-radius: var(--radius); overflow: hidden; border-left: 8px solid var(--red); display: flex; flex-direction: column; }
+.media-item { background: var(--white); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
 .media-body { padding: 24px 28px 26px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .media-outlet { margin: 0; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; font-size: 14px; color: var(--red); }
 .media-outlet span { color: var(--muted); letter-spacing: .04em; font-weight: 700; }
@@ -447,10 +445,6 @@ button.gallery-item:hover { transform: translateY(-4px); }
 }
 
 /* Text-only event cards (no photo yet) */
-.event-card.no-media { border-top: 10px solid var(--red); }
-.event-card.no-media.event-navy { border-top-color: var(--navy); }
-.event-card.no-media.event-ink { border-top-color: var(--ink); }
-.event-card.no-media.event-cream { border-top-color: var(--red); }
 .event-feature.no-media { background: var(--red); color: var(--white); border-top: 0; }
 .event-feature.no-media .event-body { padding: clamp(28px, 4vw, 48px); }
 .event-feature.no-media .event-meta,
