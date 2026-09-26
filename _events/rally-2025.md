@@ -8,8 +8,8 @@ city: "Birmingham, AL"
 summary: >-
   About 500 people gathered at Railroad Park in Birmingham for Alabama's
   Stand Up for Science rally, part of the first national day of action.
-# image: /assets/img/events/rally-2025.jpg
-# image_alt: Crowd at Railroad Park holding Stand Up for Science signs
+image: /assets/img/events/rally-2025.jpg
+image_alt: "Birmingham Stand Up for Science 2025 flyer: March 7, 2025, Railroad Park, 12–3 PM. Science is for everyone."
 # gallery:
 #   - src: /assets/img/events/rally-2025-1.jpg
 #     alt: Describe the photo
