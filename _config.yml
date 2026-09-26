@@ -20,7 +20,7 @@ announcement: "Follow @standupforsciencealabama on Instagram for our next event!
 announcement_link: "https://www.instagram.com/standupforsciencealabama/"
 
 # Contact + socials (leave a value blank "" to hide that icon)
-email: ""            # e.g. hello@yourdomain.org
+email: "standupforsciencealabama@proton.me"
 social:
   instagram: "https://www.instagram.com/standupforsciencealabama/"   # full profile URLs
   bluesky: ""
