@@ -5,21 +5,20 @@
    ========================================================== */
 
 :root {
-  --red: #d62828;
-  --red-dark: #b01d1d;
-  --cream: #f2eee9;
-  --cream-deep: #e6ded3;
-  --ink: #000000;
-  --navy: #003049;
+  --red: #d7282f;
+  --red-dark: #b01d24;
+  --cream: #f3efe8;
+  --cream-deep: #e7dfd1;
+  --ink: #141414;
+  --navy: #0f3b52;
   --white: #ffffff;
   --muted: #5d5850;
 
   --font: "League Spartan", "Futura", "Avenir Next", system-ui, sans-serif;
-  --serif: "Noto Serif JP", "Noto Serif", Georgia, serif;
 
   --wrap: 1200px;
   --gutter: clamp(16px, 4vw, 40px);
-  --radius: 10px;
+  --radius: 6px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -30,9 +29,9 @@ html { scroll-behavior: smooth; scroll-padding-top: 100px; }
 body {
   margin: 0;
   color: var(--ink);
-  font-family: var(--serif);
+  font-family: var(--font);
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   /* speckled paper */
@@ -471,59 +470,7 @@ button.gallery-item:hover { transform: translateY(-4px); }
 .event-feature.no-media .tag-cream { background: var(--white); }
 .event-feature.no-media .tag-outline { border-color: var(--white); color: var(--white); }
 
-
-/* ==========================================================
-   National Stand Up for Science style
-   (League Spartan headings, Noto Serif JP text, #d62828 red,
-   #003049 navy, 10px-radius buttons, hand-drawn red underlines)
-   ========================================================== */
-h1, h2, h3, .section-title, .page-title, .hero-title, .sub-title, .cta h2,
-.meetup-banner h2, .event-body h3, .media-item h3, .prose h2, .prose h3, .pillars h3 {
-  font-family: var(--font); font-weight: 600; letter-spacing: -.04em;
-}
-.hero-title { font-weight: 700; }
-.site-nav a, .eyebrow, .tag, .filter, .text-link, .event-meta, .media-outlet,
-.poster-kicker, .poster-label, .poster-strip, .ticker-track, .footer-links a { font-family: var(--font); }
-.site-nav a { font-weight: 800; }
-.event-meta, .media-outlet span { font-weight: 600; }
-
-/* Hand-drawn red underline instead of a straight one */
-u, .hero-link {
-  color: var(--red); text-decoration: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 10' preserveAspectRatio='none'%3E%3Cpath d='M2 6.5C60 3.5 120 4 180 4.8S270 6 298 3.2' fill='none' stroke='%23d62828' stroke-width='3.2' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat; background-position: 0 100%; background-size: 100% .2em;
-  padding-bottom: .06em; -webkit-box-decoration-break: clone; box-decoration-break: clone;
-}
-
-/* Buttons: red wide-tracked, navy outline, 10px corners */
-.btn { font-family: var(--font); border-radius: var(--radius); border-width: 1px; }
-.btn:hover { transform: none; opacity: .88; }
-.btn-red { background: var(--red); color: var(--cream); font-weight: 700; letter-spacing: .2em; }
-.btn-wide { letter-spacing: .2em; }
-.btn-outline { border-color: var(--navy); color: var(--navy); font-weight: 900; letter-spacing: .02em; }
-.btn-outline:hover { background: var(--navy); color: var(--white); opacity: 1; }
-.btn-white { color: var(--ink); font-weight: 700; letter-spacing: .2em; }
-.text-link { color: var(--navy); font-weight: 900; }
-.text-link:hover { color: var(--red); }
-.social a { background: var(--navy); border-radius: 8px; }
-
-/* Flat white cards like the national event listings */
-.event-card, .media-item, .pillars li { border-radius: 0; box-shadow: none; }
-.event-card:hover { transform: none; box-shadow: none; }
-.event-body p, .media-item p, .pillars p { font-family: var(--serif); }
-.media-item { border-left-color: var(--red); }
-.hero-poster, .media-note, .gallery-item, .lightbox { border-radius: 0; }
-.poster-strip { letter-spacing: .1em; }
+/* Event flyer (shown whole, tap to enlarge) */
 .event-flyer { display: block; max-width: 454px; margin: 0 auto 40px; border: 0; padding: 0; background: none; cursor: zoom-in; }
 .event-flyer img { width: 100%; height: auto; }
-
-/* Cream footer with a thin red rule, like the national site */
-.site-footer { background: transparent; color: var(--ink); border-top: 1px solid var(--red); }
-.footer-logo, .footer-links a { color: var(--ink); }
-.footer-brand a:not(.logo) { color: var(--ink); }
-.footer-links a:hover { color: var(--red); }
-.social-footer a { background: var(--ink); border-radius: 0; }
-.copyright { color: var(--ink); font-weight: 700; font-size: 14px; }
-.logo-box, .logo-state, .announcement, .pillar-num, .poster-num, .skip-link, .lightbox-close { font-family: var(--font); }
-.announcement { font-weight: 600; }
 .event-media { object-position: top; }
