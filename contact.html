@@ -1,0 +1,41 @@
+---
+permalink: /contact/
+title: Contact
+eyebrow: Get in touch
+lede: Send us a message, join our email list, or both. It all goes straight to our inbox.
+---
+<div class="contact-grid">
+  <form class="contact-form" action="https://formsubmit.co/{{ site.email }}" method="POST">
+    <!-- FormSubmit settings -->
+    <input type="hidden" name="_subject" value="New message from the SUFS Alabama website">
+    <input type="hidden" name="_next" value="{{ '/contact/thanks/' | absolute_url }}">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <label for="cf-name">Name</label>
+    <input id="cf-name" type="text" name="name" autocomplete="name" required>
+
+    <label for="cf-email">Email</label>
+    <input id="cf-email" type="email" name="email" autocomplete="email" required>
+
+    <label for="cf-message">Message <span class="optional">(optional if you're just joining the list)</span></label>
+    <textarea id="cf-message" name="message" rows="6"></textarea>
+
+    <label class="check">
+      <input type="checkbox" name="email_list" value="Yes, add me to the email list">
+      <span>Add me to the SUFS Alabama email list</span>
+    </label>
+
+    <button class="btn btn-red" type="submit">Send</button>
+    <p class="form-note">Prefer your own email app? Write to <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+  </form>
+
+  <aside class="contact-aside">
+    <h2>Other ways to connect</h2>
+    <ul>
+      <li><a href="{{ site.social.instagram }}" target="_blank" rel="noopener">Instagram: @standupforsciencealabama</a></li>
+      <li><a href="{{ site.social.linktree }}" target="_blank" rel="noopener">All our links</a></li>
+      <li><a href="{{ '/events/' | relative_url }}">Our events</a></li>
+    </ul>
+  </aside>
+</div>

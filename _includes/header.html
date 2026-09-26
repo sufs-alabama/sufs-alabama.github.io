@@ -9,6 +9,7 @@
         <a href="{{ '/who-we-are/' | relative_url }}"{% if page.url == '/who-we-are/' %} aria-current="page"{% endif %}>Who We Are</a>
         <a href="{{ '/events/' | relative_url }}"{% if page.url contains '/events/' %} aria-current="page"{% endif %}>Events</a>
         <a href="{{ '/media/' | relative_url }}"{% if page.url == '/media/' %} aria-current="page"{% endif %}>Media</a>
+        <a href="{{ '/contact/' | relative_url }}"{% if page.url contains '/contact/' %} aria-current="page"{% endif %}>Contact</a>
         {% assign graphics = site.data.infographics | where_exp: "g", "g.image" %}
         {% if graphics.size > 0 %}<a href="{{ '/infographics/' | relative_url }}"{% if page.url == '/infographics/' %} aria-current="page"{% endif %}>Infographics</a>{% endif %}
       </nav>

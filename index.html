@@ -94,7 +94,7 @@ title: Home
     <h2>Science needs you.<br>Alabama needs science.</h2>
     <div class="cta-actions">
       {% if site.email and site.email != "" %}
-        <a class="btn btn-white" href="mailto:{{ site.email }}">Email us</a>
+        <a class="btn btn-white" href="{{ '/contact/' | relative_url }}">Contact us</a>
       {% endif %}
       {% if site.social.linktree and site.social.linktree != "" %}
         <a class="btn btn-white" href="{{ site.social.linktree }}" target="_blank" rel="noopener">All our links</a>

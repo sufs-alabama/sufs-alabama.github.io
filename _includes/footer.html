@@ -8,6 +8,7 @@
       <a href="{{ '/who-we-are/' | relative_url }}">Who We Are</a>
       <a href="{{ '/events/' | relative_url }}">Events</a>
       <a href="{{ '/media/' | relative_url }}">Media</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
       {% assign graphics = site.data.infographics | where_exp: "g", "g.image" %}
       {% if graphics.size > 0 %}<a href="{{ '/infographics/' | relative_url }}">Infographics</a>{% endif %}
     </nav>

@@ -14,6 +14,7 @@ The site rebuilds automatically in a minute or two.
 | The "Who We Are" page and team | `who-we-are.md` |
 | An event | the matching file in `_events/` |
 | Press coverage on the Media page | `_data/media.yml` |
+| Contact form text | `contact.html` |
 | The infographics gallery | `_data/infographics.yml` + images in `assets/img/infographics/` |
 | Home page text | `index.html` |
 
@@ -63,6 +64,15 @@ Upload the image to `assets/img/infographics/`, then add it to `_data/infographi
   caption: Shared for the March rally.
 ```
 Delete the three "Your infographic here" placeholder entries once real ones are in.
+
+## Contact form
+
+The Contact page (`contact.html`) sends messages to the chapter email in `_config.yml`
+through [FormSubmit](https://formsubmit.co) (free, no account). The very first submission
+triggers a one-time confirmation email to that inbox; click the link in it to activate
+the form. Messages then arrive with the subject "New message from the SUFS Alabama
+website". People who tick "Add me to the SUFS Alabama email list" show `email_list: Yes`
+in the message.
 
 ## Turn on GitHub Pages
 
