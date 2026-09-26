@@ -1,34 +1,17 @@
 <footer class="site-footer">
-  <div class="footer-top">
-    <div>
-      <a class="logo logo-sm" href="{{ '/' | relative_url }}">{% include logo.html %}<span class="sr-only">{{ site.title }} home</span></a>
-      <p class="footer-contact">
-        {% if site.email and site.email != "" %}Contact: <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-        {% else %}Instagram: <a href="{{ site.social.instagram }}" target="_blank" rel="noopener">@standupforsciencealabama</a>{% endif %}
-      </p>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="{{ '/' | relative_url }}">{% include logo.html %}<span class="sr-only">{{ site.title }} home</span></a>
+      <p>An Alabama chapter of the <a href="{{ site.national_site }}" target="_blank" rel="noopener">Stand Up for Science</a> movement.</p>
     </div>
-    <div class="footer-cols">
-      <ul>
-        <li><a href="{{ '/who-we-are/' | relative_url }}">Who We Are</a></li>
-        <li><a href="{{ '/events/' | relative_url }}">Events</a></li>
-        <li><a href="{{ '/media/' | relative_url }}">In The News</a></li>
-      </ul>
-      <ul>
-        {% if site.social.instagram != "" %}<li><a href="{{ site.social.instagram }}" target="_blank" rel="noopener">Instagram</a></li>{% endif %}
-        {% if site.social.linktree != "" %}<li><a href="{{ site.social.linktree }}" target="_blank" rel="noopener">All Links</a></li>{% endif %}
-        {% if site.social.github != "" %}<li><a href="{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a></li>{% endif %}
-      </ul>
-      <ul>
-        <li><a href="{{ site.national_site }}" target="_blank" rel="noopener">National SUFS</a></li>
-        <li><a href="{{ site.national_site }}take-action" target="_blank" rel="noopener">Take Action</a></li>
-        <li><a href="{{ site.national_site }}donate" target="_blank" rel="noopener">Donate</a></li>
-      </ul>
-    </div>
-  </div>
-  <hr class="footer-rule">
-  <div class="footer-bottom">
-    <p class="copyright">Copyright © {{ site.time | date: "%Y" }} {{ site.title }}</p>
-    <p class="note">An Alabama chapter of the Stand Up for Science movement.</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="{{ '/who-we-are/' | relative_url }}">Who We Are</a>
+      <a href="{{ '/events/' | relative_url }}">Events</a>
+      <a href="{{ '/media/' | relative_url }}">Media</a>
+      {% assign graphics = site.data.infographics | where_exp: "g", "g.image" %}
+      {% if graphics.size > 0 %}<a href="{{ '/infographics/' | relative_url }}">Infographics</a>{% endif %}
+    </nav>
     {% include social.html class="social-footer" %}
   </div>
+  <p class="wrap copyright">© {{ site.time | date: "%Y" }} {{ site.title }}</p>
 </footer>

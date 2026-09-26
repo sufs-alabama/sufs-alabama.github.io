@@ -1,21 +1,29 @@
 ---
 permalink: /media/
-title: In The News
+title: Media
+eyebrow: In the news
+lede: Press coverage, video, and interviews featuring Stand Up for Science Alabama.
 ---
 {% assign items = site.data.media | sort: "date" | reverse %}
 {% assign videos = items | where: "type", "video" %}
 {% assign press = items | where_exp: "m", "m.type != 'video'" %}
-<div class="wrap">
-  {% if videos.size > 0 %}
-    <h2 class="center">Videos</h2>
-    <div class="video-grid">
-      {% for m in videos %}
-        <iframe src="https://www.youtube-nocookie.com/embed/{{ m.youtube_id }}" title="{{ m.outlet | escape }}: {{ m.title | escape }}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      {% endfor %}
-    </div>
-  {% endif %}
-  <h2 class="sub-title">Articles</h2>
-  <div class="article-grid">
-    {% for m in press %}{% include media-item.html item=m %}{% endfor %}
-  </div>
+
+<div class="media-list">
+  {% for m in press %}{% include media-item.html item=m %}{% endfor %}
+</div>
+
+{% if videos.size > 0 %}
+<h2 class="sub-title">Video</h2>
+<div class="media-videos">
+  {% for m in videos %}{% include media-item.html item=m %}{% endfor %}
+</div>
+{% endif %}
+
+<div class="media-note">
+  <h2>Press inquiries</h2>
+  <p>
+    Writing about science in Alabama? We're glad to connect you with scientists, students,
+    and organizers.
+    {% if site.email and site.email != "" %}Email <a href="mailto:{{ site.email }}">{{ site.email }}</a>.{% endif %}
+  </p>
 </div>

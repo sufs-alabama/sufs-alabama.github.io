@@ -1,8 +1,16 @@
 {%- assign e = include.event -%}
-<article class="event-card" id="{{ e.slug }}">
-  <div class="event-card-inner">
-    <h3><a href="{{ e.url | relative_url }}">{{ e.title }} - {{ e.date | date: "%m/%d/%Y" }}</a></h3>
-    <p class="venue">{% if e.venue %}{{ e.venue }}<br>{% endif %}{{ e.city }}</p>
-    <p class="desc">{{ e.summary }}</p>
+{%- assign cat = site.data.categories[e.category] -%}
+<article class="event-card event-{{ cat.color }}{% if include.feature %} event-feature{% endif %}{% unless e.image %} no-media{% endunless %}" data-category="{{ e.category }}">
+  {% if e.image %}
+  <a class="event-media-link" href="{{ e.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    <img class="event-media" src="{{ e.image | relative_url }}" alt="" loading="lazy">
+  </a>
+  {% endif %}
+  <div class="event-body">
+    <p class="event-tags"><span class="tag tag-{{ cat.color }}">{{ cat.label }}</span>{% if e.upcoming %} <span class="tag tag-outline">Upcoming</span>{% endif %}</p>
+    <h3><a href="{{ e.url | relative_url }}">{{ e.title }}</a></h3>
+    <p class="event-meta">{% include event-date.html event=e %} · {% include event-place.html event=e %}</p>
+    <p>{{ e.summary }}</p>
+    <a class="text-link" href="{{ e.url | relative_url }}">{% if e.upcoming %}Details{% else %}Read more{% endif %} →</a>
   </div>
 </article>

@@ -1,16 +1,27 @@
 ---
 permalink: /events/
 title: Events
+eyebrow: Where we've shown up
+lede: Rallies, trivia nights, and meetups across Alabama.
 ---
-{% assign now = site.time | date: "%s" | plus: 0 %}
-{% assign upcoming = "" | split: "" %}{% assign past = "" | split: "" %}
-{% for e in site.events %}
-  {% assign t = e.date | date: "%s" | plus: 0 %}
-  {% if t >= now %}{% assign upcoming = upcoming | push: e %}{% else %}{% assign past = past | push: e %}{% endif %}
-{% endfor %}
-{% if upcoming.size > 0 %}
-  <h2 class="sub-title">Upcoming</h2>
-  <div class="event-list">{% assign up = upcoming | sort: "date" %}{% for e in up %}{% include event-card.html event=e %}{% endfor %}</div>
-  <h2 class="sub-title">Past</h2>
-{% endif %}
-<div class="event-list">{% assign ps = past | sort: "date" | reverse %}{% for e in ps %}{% include event-card.html event=e %}{% endfor %}</div>
+{% assign next = site.events | where: "upcoming", true | sort: "date" | first %}
+{% assign events_sorted = site.events | sort: "date" | reverse %}
+
+<div class="filters" role="group" aria-label="Filter events">
+  <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+  {% for c in site.data.categories %}
+    {% assign in_cat = site.events | where: "category", c[0] %}
+    {% if in_cat.size > 0 %}
+    <button class="filter" data-filter="{{ c[0] }}" aria-pressed="false">{{ c[1].label }}</button>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<div class="event-grid">
+  {% if next %}{% include event-card.html event=next feature=true %}{% endif %}
+  {% for e in events_sorted %}
+    {% unless e.url == next.url %}
+      {% include event-card.html event=e %}
+    {% endunless %}
+  {% endfor %}
+</div>

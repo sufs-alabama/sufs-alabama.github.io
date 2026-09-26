@@ -1,24 +1,38 @@
 ---
 layout: default
 ---
-<div class="title-band"><h1>{{ page.title }}</h1></div>
-<div class="page-body wrap">
-  <div class="prose event-detail">
-    <p class="venue center">
-      <strong>{{ page.date | date: "%A, %B %-d, %Y" }}{% if page.time %} · {{ page.time }}{% endif %}</strong><br>
-      {% if page.venue %}{{ page.venue }}<br>{% endif %}{{ page.city }}
-    </p>
+{% assign cat = site.data.categories[page.category] %}
+<article class="event-page">
+  <header class="page-hero">
+    <div class="wrap">
+      <a class="back-link" href="{{ '/events/' | relative_url }}">← All events</a>
+      <p><span class="tag tag-{{ cat.color }}">{{ cat.label }}</span>{% if page.upcoming %} <span class="tag tag-outline">Upcoming</span>{% endif %}</p>
+      <h1 class="page-title">{{ page.title }}</h1>
+      <p class="event-meta">{% include event-date.html event=page %} · {% include event-place.html event=page %}</p>
+    </div>
+  </header>
+  <div class="wrap event-page-body">
     {% if page.image %}
-      <button class="gallery-item event-flyer" data-full="{{ page.image | relative_url }}">
-        <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}">
-      </button>
+      <button class="gallery-item event-flyer" data-full="{{ page.image | relative_url }}"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}"></button>
     {% endif %}
-    {{ content }}
-    <p class="center">
-      {% if page.event_link %}<a class="btn btn-outline" href="{{ page.event_link }}" target="_blank" rel="noopener">Event listing</a>{% endif %}
-      {% if page.rsvp_link and page.rsvp_link != "" %}<a class="btn btn-red btn-sm" href="{{ page.rsvp_link }}">RSVP</a>{% endif %}
-    </p>
-    <p class="center"><a class="text-cta" href="{{ '/events/' | relative_url }}">All events</a></p>
+    <div class="prose">
+      {{ content }}
+      {% if page.event_link %}
+        <p><a class="btn btn-outline" href="{{ page.event_link }}" target="_blank" rel="noopener">Event listing ↗</a></p>
+      {% endif %}
+      {% if page.rsvp_link and page.rsvp_link != "" %}
+        <p><a class="btn btn-red" href="{{ page.rsvp_link }}">RSVP</a></p>
+      {% endif %}
+    </div>
+    {% if page.gallery %}
+      <div class="gallery">
+        {% for photo in page.gallery %}
+          <button class="gallery-item" data-full="{{ photo.src | relative_url }}">
+            <img src="{{ photo.src | relative_url }}" alt="{{ photo.alt | escape }}" loading="lazy">
+          </button>
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
-</div>
+</article>
 {% include lightbox.html %}
