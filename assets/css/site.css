@@ -221,17 +221,6 @@ u, .hero-link {
   .btn-wide { padding-left: 36px; padding-right: 36px; }
 }
 
-/* ---------- Ticker ---------- */
-.ticker { background: var(--ink); color: var(--white); overflow: hidden; white-space: nowrap; }
-.ticker-track {
-  display: inline-flex; gap: 28px; padding: 14px 0 11px;
-  font-weight: 800; text-transform: uppercase; letter-spacing: .1em; font-size: 18px;
-  animation: ticker 36s linear infinite;
-}
-.ticker-track span:nth-child(even) { color: var(--red); }
-@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-@media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
-
 /* ---------- Meetup banner ---------- */
 .meetup-banner { background: var(--red); color: var(--white); }
 .meetup-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding-top: 40px; padding-bottom: 40px; }
