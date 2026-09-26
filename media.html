@@ -8,6 +8,7 @@ lede: Press coverage, video, and interviews featuring Stand Up for Science Alaba
 {% assign videos = items | where: "type", "video" %}
 {% assign press = items | where_exp: "m", "m.type != 'video'" %}
 
+<h2 class="sr-only">Press coverage</h2>
 <div class="media-list">
   {% for m in press %}{% include media-item.html item=m %}{% endfor %}
 </div>

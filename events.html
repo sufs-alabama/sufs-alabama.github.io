@@ -17,6 +17,7 @@ lede: Rallies, trivia nights, and meetups across Alabama.
   {% endfor %}
 </div>
 
+<h2 class="sr-only">All events</h2>
 <div class="event-grid">
   {% if next %}{% include event-card.html event=next feature=true %}{% endif %}
   {% for e in events_sorted %}
