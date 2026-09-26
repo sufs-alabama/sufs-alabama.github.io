@@ -16,8 +16,8 @@ url: "https://sufs-alabama.github.io"
 baseurl: ""
 
 # Red bar across the top of every page. Set `announcement:` to "" to hide it.
-announcement: "Save the date: the SUFS Alabama 2026 Meetup is coming. Details soon!"
-announcement_link: "/events/#meetup"
+announcement: "Follow @standupforsciencealabama on Instagram for our next event!"
+announcement_link: "https://www.instagram.com/standupforsciencealabama/"
 
 # Contact + socials (leave a value blank "" to hide that icon)
 email: ""            # e.g. hello@yourdomain.org
@@ -32,7 +32,7 @@ national_site: "https://www.standupforscience.net/"
 
 # Call-to-action button in the header
 header_cta_label: "Get Involved"
-header_cta_link: "/#get-involved"
+header_cta_link: "https://linktr.ee/standupforsciencealabama"
 
 # Show upcoming (future-dated) events like the 2026 meetup
 future: true

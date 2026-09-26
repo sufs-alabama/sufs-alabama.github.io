@@ -1,15 +1,5 @@
 {%- assign m = include.item -%}
-<article class="media-item media-type-{{ m.type }}">
-  {% if m.youtube_id %}
-    <div class="media-video">
-      <iframe src="https://www.youtube-nocookie.com/embed/{{ m.youtube_id }}" title="{{ m.title | escape }}" loading="lazy"
-        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  {% endif %}
-  <div class="media-body">
-    <p class="media-outlet">{{ m.outlet }} <span>· {% if m.date_display %}{{ m.date_display }}{% else %}{{ m.date | date: "%B %-d, %Y" }}{% endif %}</span></p>
-    <h3><a href="{{ m.url }}" target="_blank" rel="noopener">{{ m.title }}</a></h3>
-    {% if m.summary %}<p>{{ m.summary }}</p>{% endif %}
-    <a class="text-link" href="{{ m.url }}" target="_blank" rel="noopener">{% if m.type == "video" %}Watch{% else %}Read{% endif %} ↗</a>
-  </div>
-</article>
+<a class="article" href="{{ m.url }}" target="_blank" rel="noopener">
+  <span class="article-circle">{{ m.outlet }}</span>
+  <p><strong>{{ m.outlet }}</strong> {{ m.title }}</p>
+</a>

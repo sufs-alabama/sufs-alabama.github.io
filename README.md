@@ -10,7 +10,7 @@ The site rebuilds automatically in a minute or two.
 
 | To change… | Edit this |
 | --- | --- |
-| Red announcement bar, email, social links | `_config.yml` |
+| Red announcement bar, email, social links, header button | `_config.yml` |
 | The "Who We Are" page and team | `who-we-are.md` |
 | An event | the matching file in `_events/` |
 | Press coverage on the Media page | `_data/media.yml` |
@@ -24,21 +24,21 @@ Look for `[brackets]` and `TODO` comments. Those are placeholders waiting for re
 1. Copy any file in `_events/`, e.g. `science-smackdown-2025.md` → `science-smackdown-2026.md`.
 2. Update the fields at the top:
    ```yaml
-   title: Fall Science Trivia
-   category: trivia          # rally | trivia | speaking | meetup
-   date: 2026-10-15          # used for ordering
-   location: "Saturn, Birmingham, AL"
-   summary: One or two sentences for the event card.
-   image: /assets/img/events/fall-trivia.jpg   # optional
+   title: Science Smackdown 2026
+   category: trivia            # rally | trivia | speaking | meetup
+   date: 2026-10-15            # shown as 10/15/2026; also sets the order
+   time: "6:30–8:30 PM"        # optional
+   venue: "Hop City Beer & Wine, 2924 3rd Ave S"   # optional
+   city: "Birmingham, AL"
+   summary: One or two sentences for the Events list.
+   image: /assets/img/events/science-smackdown-2026.jpg   # optional flyer
+   image_alt: Describe the flyer
+   event_link: https://www.eventbrite.com/e/...           # optional
+   rsvp_link: https://...                                 # optional, upcoming events
    ```
 3. Write the story below the `---` line in plain Markdown.
 
-Photos go in `assets/img/events/`. Add a photo gallery to an event with:
-```yaml
-gallery:
-  - src: /assets/img/events/rally-1.jpg
-    alt: Crowd holding signs on the capitol steps
-```
+Future-dated events appear under "Upcoming" on the Events page automatically.
 
 ### Add press coverage
 
@@ -79,6 +79,8 @@ bundle exec jekyll serve
 
 ## Design
 
-Uses the visual identity of the national Stand Up for Science brand: signal red
-(`#d7282f`), speckled cream paper, deep navy, heavy geometric type (League Spartan),
-and the red logo box, with an Alabama tag. Colors live at the top of `assets/css/site.css`.
+Follows the national [Stand Up for Science](https://www.standupforscience.net/) design system:
+League Spartan headings and Noto Serif JP body text, red `#d62828`, navy `#003049`,
+speckled paper `#f2eee9`, 10px-radius buttons, hand-drawn red underlines (`.scribble`),
+thin black section rules, red page-title bands, and white full-width event strips.
+Colors live at the top of `assets/css/site.css`.

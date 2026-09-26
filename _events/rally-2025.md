@@ -2,8 +2,9 @@
 title: Stand Up for Science Rally 2025
 category: rally
 date: 2025-03-07
-date_display: "Friday, March 7, 2025"
-location: "Railroad Park, Birmingham, AL"
+time: "12:00–3:00 PM"
+venue: "Railroad Park, 1600 1st Ave S"
+city: "Birmingham, AL"
 summary: >-
   About 500 people gathered at Railroad Park in Birmingham for Alabama's
   Stand Up for Science rally, part of the first national day of action.
@@ -27,7 +28,7 @@ scientists and for UAB's medical research.
 
 **Details**
 
-- **When:** Friday, March 7, 2025, starting at noon
+- **When:** Friday, March 7, 2025, 12:00 to 3:00 PM
 - **Where:** Railroad Park, 1600 1st Ave. S., Birmingham (Webb Memorial Gardens area)
 - **Program:** "Ask a Scientist" panel, then rally and march
 

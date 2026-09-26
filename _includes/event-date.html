@@ -1,1 +1,0 @@
-{%- if include.event.date_display -%}{{ include.event.date_display }}{%- elsif include.event.date -%}{{ include.event.date | date: "%B %-d, %Y" }}{%- endif -%}

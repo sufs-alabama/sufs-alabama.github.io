@@ -1,8 +1,10 @@
 {% if site.announcement and site.announcement != "" %}
 <div class="announcement" id="announcement" data-message="{{ site.announcement | slugify }}">
-  <div class="wrap announcement-inner">
-    {% if site.announcement_link %}<a href="{{ site.announcement_link | relative_url }}">{{ site.announcement }}</a>{% else %}<span>{{ site.announcement }}</span>{% endif %}
-    <button class="announcement-close" aria-label="Dismiss announcement">×</button>
+  <div class="wrap">
+    <div class="announcement-inner">
+      {% if site.announcement_link %}<a href="{{ site.announcement_link | relative_url }}"{% if site.announcement_link contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ site.announcement }}</a>{% else %}{{ site.announcement }}{% endif %}
+      <button class="announcement-close" aria-label="Dismiss announcement">×</button>
+    </div>
   </div>
 </div>
 {% endif %}

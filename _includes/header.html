@@ -1,26 +1,20 @@
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="logo" href="{{ '/' | relative_url }}">
-      {% include logo.html %}
-      <span class="sr-only">{{ site.title }} home</span>
-    </a>
-    <div class="header-right" id="header-menu">
-      <nav id="site-nav" class="site-nav" aria-label="Main">
-        <a href="{{ '/who-we-are/' | relative_url }}"{% if page.url == '/who-we-are/' %} aria-current="page"{% endif %}>Who We Are</a>
-        <a href="{{ '/events/' | relative_url }}"{% if page.url contains '/events/' %} aria-current="page"{% endif %}>Events</a>
-        <a href="{{ '/media/' | relative_url }}"{% if page.url == '/media/' %} aria-current="page"{% endif %}>Media</a>
-        {% assign graphics = site.data.infographics | where_exp: "g", "g.image" %}
-        {% if graphics.size > 0 %}<a href="{{ '/infographics/' | relative_url }}"{% if page.url == '/infographics/' %} aria-current="page"{% endif %}>Infographics</a>{% endif %}
-        <a href="{{ '/events/#meetup' | relative_url }}">2026 Meetup</a>
-      </nav>
-      <div class="header-actions">
-        {% include social.html class="social-header" %}
-        <a class="btn btn-outline" href="{{ site.header_cta_link | relative_url }}">{{ site.header_cta_label }}</a>
-      </div>
+    <nav class="site-nav" aria-label="Main">{% include nav-links.html %}</nav>
+    <a class="logo header-logo" href="{{ '/' | relative_url }}">{% include logo.html %}<span class="sr-only">{{ site.title }} home</span></a>
+    <div class="header-actions">
+      {% include social.html %}
+      <a class="btn btn-outline" href="{{ site.header_cta_link | relative_url }}">{{ site.header_cta_label }}!</a>
     </div>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="header-menu">
-      <span class="sr-only">Menu</span>
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="sr-only">Menu</span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
     </button>
+  </div>
+  <div class="wrap mobile-menu" id="mobile-menu">
+    <nav class="site-nav" aria-label="Mobile">{% include nav-links.html %}</nav>
+    <div class="mobile-actions">
+      {% include social.html %}
+      <a class="btn btn-outline" href="{{ site.header_cta_link | relative_url }}">{{ site.header_cta_label }}!</a>
+    </div>
   </div>
 </header>

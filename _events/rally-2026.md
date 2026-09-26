@@ -2,8 +2,7 @@
 title: Rally to Take Back Science 2026
 category: rally
 date: 2026-03-07
-date_display: "Saturday, March 7, 2026"
-location: "Birmingham, AL"
+city: "Birmingham, AL"
 summary: >-
   Birmingham was back for the second national day of action, one of dozens of
   "Rally to Take Back Science" events across the country.
