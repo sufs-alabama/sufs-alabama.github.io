@@ -68,9 +68,9 @@ Delete the three "Your infographic here" placeholder entries once real ones are 
 ## Contact form
 
 The Contact page (`contact.html`) sends messages to the chapter email in `_config.yml`
-through [FormSubmit](https://formsubmit.co) (free, no account). The very first submission
-triggers a one-time confirmation email to that inbox; click the link in it to activate
-the form. Messages then arrive with the subject "New message from the SUFS Alabama
+through [FormSubmit](https://formsubmit.co) (free, no account), using the form ID in
+`formsubmit_id` in `_config.yml` so the address isn't exposed in the page. The form is
+already activated. Messages then arrive with the subject "New message from the SUFS Alabama
 website". People who tick "Add me to the SUFS Alabama email list" show `email_list: Yes`
 in the message.
 

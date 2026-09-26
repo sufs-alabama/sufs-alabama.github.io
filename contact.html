@@ -5,7 +5,7 @@ eyebrow: Get in touch
 lede: Send us a message, join our email list, or both. It all goes straight to our inbox.
 ---
 <div class="contact-grid">
-  <form class="contact-form" action="https://formsubmit.co/{{ site.email }}" method="POST">
+  <form class="contact-form" action="https://formsubmit.co/{{ site.formsubmit_id }}" method="POST">
     <!-- FormSubmit settings -->
     <input type="hidden" name="_subject" value="New message from the SUFS Alabama website">
     <input type="hidden" name="_next" value="{{ '/contact/thanks/' | absolute_url }}">

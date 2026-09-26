@@ -21,6 +21,8 @@ announcement_link: "https://www.instagram.com/standupforsciencealabama/"
 
 # Contact + socials (leave a value blank "" to hide that icon)
 email: "standupforsciencealabama@proton.me"
+# FormSubmit form ID for the Contact page (delivers to the email above)
+formsubmit_id: "74eb66dcb7f8e974139d73850c9ffa8c"
 social:
   instagram: "https://www.instagram.com/standupforsciencealabama/"   # full profile URLs
   bluesky: ""
