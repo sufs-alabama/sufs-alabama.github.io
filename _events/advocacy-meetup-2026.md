@@ -8,8 +8,8 @@ city: "Birmingham, AL 35212"
 summary: >-
   Supporters got to know more about outreach events and groups in Alabama at
   our Science and Medicine Advocacy Meetup.
-# image: /assets/img/events/advocacy-meetup-2026.jpg
-# image_alt: Science and Medicine Advocacy Meetup flyer
+image: /assets/img/events/advocacy-meetup-2026.jpg
+image_alt: "Science and Medicine Advocacy Meetup flyer: get to know more about outreach events and groups in Alabama. March 7th at 1 PM, House Eleven, 5229 1st Avenue North, Birmingham, AL 35212. Hosted by Stand Up for Science Alabama."
 ---
 
 Our **Science and Medicine Advocacy Meetup** brought people together to get to know
