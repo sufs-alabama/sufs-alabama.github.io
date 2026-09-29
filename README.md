@@ -89,8 +89,7 @@ bundle exec jekyll serve
 
 ## Design
 
-Follows the national [Stand Up for Science](https://www.standupforscience.net/) design system:
-League Spartan headings and Noto Serif JP body text, red `#d62828`, navy `#003049`,
-speckled paper `#f2eee9`, 10px-radius buttons, hand-drawn red underlines (`.scribble`),
-thin black section rules, red page-title bands, and white full-width event strips.
-Colors live at the top of `assets/css/site.css`.
+Built on [Bootstrap 5.3](https://getbootstrap.com/docs/5.3/) (loaded from the jsDelivr CDN) for
+the layout grid, navbar, cards, buttons, and form. `assets/css/site.css` only adds the brand:
+League Spartan font, red `#d7282f` (with `#b8212a` for red text), navy `#0f3b52`, cream background,
+category badge colors, and the logo. Use normal Bootstrap classes in templates.

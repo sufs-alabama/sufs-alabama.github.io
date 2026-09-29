@@ -3,10 +3,8 @@ permalink: /who-we-are/
 title: Who We Are
 eyebrow: About SUFS Alabama
 lede: Alabamians standing up for science, and for the people who do it.
-prose: true
 ---
-
-<!-- TODO: make this your chapter's own story -->
+<div class="col-xl-10" markdown="1">
 
 We're the Alabama arm of **Stand Up for Science**, a national grassroots movement
 defending science, research funding, and the scientists behind them.
@@ -16,52 +14,34 @@ who believe science belongs to everyone. Alabama is home to world-class research
 from rocket propulsion to genomics to medicine, and that work keeps our communities
 healthy, employed, and curious.
 
-## What we do
+</div>
 
-<ul class="pillars">
-  <li>
-    <span class="pillar-num">01</span>
-    <h3>Defend research</h3>
-    <p>Stable, independent funding for the science that powers Alabama's universities, hospitals, and industries.</p>
-  </li>
-  <li>
-    <span class="pillar-num">02</span>
-    <h3>Make science public</h3>
-    <p>Trivia nights, talks, and meetups where anyone can ask questions and get real answers.</p>
-  </li>
-  <li>
-    <span class="pillar-num">03</span>
-    <h3>Show up together</h3>
-    <p>Rallies and advocacy that put Alabama voices in the national conversation.</p>
-  </li>
-</ul>
+<h2 class="h3 fw-bold mt-5 mb-4">What we do</h2>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col"><div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+    <h3 class="h5 fw-bold">Defend research</h3>
+    <p class="card-text mb-0">Stable, independent funding for the science that powers Alabama's universities, hospitals, and industries.</p>
+  </div></div></div>
+  <div class="col"><div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+    <h3 class="h5 fw-bold">Make science public</h3>
+    <p class="card-text mb-0">Trivia nights, talks, and meetups where anyone can ask questions and get real answers.</p>
+  </div></div></div>
+  <div class="col"><div class="card h-100 border-0 shadow-sm"><div class="card-body p-4">
+    <h3 class="h5 fw-bold">Show up together</h3>
+    <p class="card-text mb-0">Rallies and advocacy that put Alabama voices in the national conversation.</p>
+  </div></div></div>
+</div>
 
 {% comment %}
 OUR TEAM: delete this comment wrapper (the two lines with "comment") to show the team section.
-
-## Our team
-
-<!-- TODO: add organizers. Copy one <li> per person; photos go in assets/img/team/ -->
-<ul class="team">
-  <li>
-    <div class="team-photo placeholder tone-red" aria-hidden="true"><span>AL</span></div>
-    <h3>[Name]</h3>
-    <p>[Role · Institution or city]</p>
-  </li>
-  <li>
-    <div class="team-photo placeholder tone-navy" aria-hidden="true"><span>AL</span></div>
-    <h3>[Name]</h3>
-    <p>[Role · Institution or city]</p>
-  </li>
-  <li>
-    <div class="team-photo placeholder tone-cream" aria-hidden="true"><span>AL</span></div>
-    <h3>[Name]</h3>
-    <p>[Role · Institution or city]</p>
-  </li>
-</ul>
+Copy one <div class="col">…</div> per person.
+<h2 class="h3 fw-bold mt-5 mb-4">Our team</h2>
+<div class="row row-cols-2 row-cols-md-4 g-4">
+  <div class="col"><h3 class="h6 fw-bold mb-0">[Name]</h3><p class="small text-body-secondary">[Role · Institution or city]</p></div>
+</div>
 {% endcomment %}
 
-## Get involved
-
-Come to an [event](/events/), follow us on social media, or connect with the
-[national movement]({{ site.national_site }}).
+<div class="col-xl-10 mt-5">
+  <h2 class="h3 fw-bold">Get involved</h2>
+  <p>Come to an <a href="{{ '/events/' | relative_url }}">event</a>, <a href="{{ '/contact/' | relative_url }}">get in touch</a>, or connect with the <a href="{{ site.national_site }}" target="_blank" rel="noopener">national movement</a>.</p>
+</div>

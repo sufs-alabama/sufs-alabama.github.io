@@ -8,23 +8,25 @@ lede: Press coverage, video, and interviews featuring Stand Up for Science Alaba
 {% assign videos = items | where: "type", "video" %}
 {% assign press = items | where_exp: "m", "m.type != 'video'" %}
 
-<h2 class="sr-only">Press coverage</h2>
-<div class="media-list">
+<h2 class="visually-hidden">Press coverage</h2>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
   {% for m in press %}{% include media-item.html item=m %}{% endfor %}
 </div>
 
 {% if videos.size > 0 %}
-<h2 class="sub-title">Video</h2>
-<div class="media-videos">
+<h2 class="h3 fw-bold mt-5 mb-4">Video</h2>
+<div class="row row-cols-1 row-cols-lg-2 g-4">
   {% for m in videos %}{% include media-item.html item=m %}{% endfor %}
 </div>
 {% endif %}
 
-<div class="media-note">
-  <h2>Press inquiries</h2>
-  <p>
-    Writing about science in Alabama? We're glad to connect you with scientists, students,
-    and organizers.
-    {% if site.email and site.email != "" %}Email <a href="mailto:{{ site.email }}">{{ site.email }}</a> or use our <a href="{{ '/contact/' | relative_url }}">contact form</a>.{% endif %}
-  </p>
+<div class="card border-0 bg-sufs-navy text-white mt-5">
+  <div class="card-body p-4 p-lg-5">
+    <h2 class="h3 fw-bold">Press inquiries</h2>
+    <p class="mb-0">
+      Writing about science in Alabama? We're glad to connect you with scientists, students,
+      and organizers.
+      {% if site.email and site.email != "" %}Email <a class="link-light" href="mailto:{{ site.email }}">{{ site.email }}</a> or use our <a class="link-light" href="{{ '/contact/' | relative_url }}">contact form</a>.{% endif %}
+    </p>
+  </div>
 </div>

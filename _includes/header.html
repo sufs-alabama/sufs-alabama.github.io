@@ -1,26 +1,19 @@
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="logo" href="{{ '/' | relative_url }}">
-      {% include logo.html %}
-      <span class="sr-only">{{ site.title }} home</span>
-    </a>
-    <div class="header-right" id="header-menu">
-      <nav id="site-nav" class="site-nav" aria-label="Main">
-        <a href="{{ '/who-we-are/' | relative_url }}"{% if page.url == '/who-we-are/' %} aria-current="page"{% endif %}>Who We Are</a>
-        <a href="{{ '/events/' | relative_url }}"{% if page.url contains '/events/' %} aria-current="page"{% endif %}>Events</a>
-        <a href="{{ '/media/' | relative_url }}"{% if page.url == '/media/' %} aria-current="page"{% endif %}>Media</a>
-        <a href="{{ '/contact/' | relative_url }}"{% if page.url contains '/contact/' %} aria-current="page"{% endif %}>Contact</a>
-        {% assign graphics = site.data.infographics | where_exp: "g", "g.image" %}
-        {% if graphics.size > 0 %}<a href="{{ '/infographics/' | relative_url }}"{% if page.url == '/infographics/' %} aria-current="page"{% endif %}>Infographics</a>{% endif %}
-      </nav>
-      <div class="header-actions">
-        {% include social.html class="social-header" %}
-        <a class="btn btn-outline" href="{{ site.header_cta_link | relative_url }}">{{ site.header_cta_label }}</a>
+<header>
+  <nav class="navbar navbar-expand-lg bg-body border-bottom" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand" href="{{ '/' | relative_url }}">{% include logo.html %}<span class="visually-hidden">{{ site.title }} home</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="navbar-nav ms-auto mb-3 mb-lg-0 fw-bold">
+          {% include nav-items.html %}
+        </ul>
+        <div class="d-flex flex-wrap align-items-center gap-3 ms-lg-4 pb-3 pb-lg-0">
+          {% include social.html %}
+          <a class="btn btn-outline-dark" href="{{ site.header_cta_link | relative_url }}">{{ site.header_cta_label }}</a>
+        </div>
       </div>
     </div>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="header-menu">
-      <span class="sr-only">Menu</span>
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-    </button>
-  </div>
+  </nav>
 </header>

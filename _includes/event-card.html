@@ -1,16 +1,16 @@
 {%- assign e = include.event -%}
 {%- assign cat = site.data.categories[e.category] -%}
-<article class="event-card event-{{ cat.color }}{% if include.feature %} event-feature{% endif %}{% unless e.image %} no-media{% endunless %}" data-category="{{ e.category }}">
-  {% if e.image %}
-  <a class="event-media-link" href="{{ e.url | relative_url }}" tabindex="-1" aria-hidden="true">
-    <img class="event-media" src="{{ e.image | relative_url }}" alt="" loading="lazy">
-  </a>
-  {% endif %}
-  <div class="event-body">
-    <p class="event-tags"><span class="tag tag-{{ cat.color }}">{{ cat.label }}</span>{% if e.upcoming %} <span class="tag tag-outline">Upcoming</span>{% endif %}</p>
-    <h3>{{ e.title }}</h3>
-    <p class="event-meta"><span class="meta-line">{% include event-date.html event=e %}</span><span class="meta-line">{% include event-place.html event=e %}</span></p>
-    <p>{{ e.summary }}</p>
-    <a class="text-link" href="{{ e.url | relative_url }}">{% if e.upcoming %}Details{% else %}Read more{% endif %}<span class="sr-only"> about {{ e.title }}</span> →</a>
-  </div>
-</article>
+<div class="col event-item" data-category="{{ e.category }}">
+  <article class="card h-100 border-0 shadow-sm">
+    {% if e.image %}<img class="card-img-top event-img" src="{{ e.image | relative_url }}" alt="" loading="lazy">{% endif %}
+    <div class="card-body">
+      <p class="mb-2"><span class="badge badge-{{ cat.color }}">{{ cat.label }}</span>{% if e.upcoming %} <span class="badge text-bg-light border">Upcoming</span>{% endif %}</p>
+      <h3 class="h5 card-title">{{ e.title }}</h3>
+      <p class="small text-body-secondary fw-semibold mb-2"><span class="d-block">{% include event-date.html event=e %}</span><span class="d-block">{% include event-place.html event=e %}</span></p>
+      <p class="card-text">{{ e.summary }}</p>
+    </div>
+    <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+      <a class="fw-bold" href="{{ e.url | relative_url }}">{% if e.upcoming %}Details{% else %}Read more{% endif %}<span class="visually-hidden"> about {{ e.title }}</span> →</a>
+    </div>
+  </article>
+</div>

@@ -4,25 +4,19 @@ title: Events
 eyebrow: Where we've shown up
 lede: Rallies, trivia nights, and meetups across Alabama.
 ---
-{% assign next = site.events | where: "upcoming", true | sort: "date" | first %}
 {% assign events_sorted = site.events | sort: "date" | reverse %}
 
-<div class="filters" role="group" aria-label="Filter events">
-  <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+<div class="d-flex flex-wrap gap-2 mb-4" role="group" aria-label="Filter events">
+  <button type="button" class="btn btn-dark btn-sm rounded-pill px-3 filter" data-filter="all" aria-pressed="true">All</button>
   {% for c in site.data.categories %}
     {% assign in_cat = site.events | where: "category", c[0] %}
     {% if in_cat.size > 0 %}
-    <button class="filter" data-filter="{{ c[0] }}" aria-pressed="false">{{ c[1].label }}</button>
+    <button type="button" class="btn btn-outline-dark btn-sm rounded-pill px-3 filter" data-filter="{{ c[0] }}" aria-pressed="false">{{ c[1].label }}</button>
     {% endif %}
   {% endfor %}
 </div>
 
-<h2 class="sr-only">All events</h2>
-<div class="event-grid">
-  {% if next %}{% include event-card.html event=next feature=true %}{% endif %}
-  {% for e in events_sorted %}
-    {% unless e.url == next.url %}
-      {% include event-card.html event=e %}
-    {% endunless %}
-  {% endfor %}
+<h2 class="visually-hidden">All events</h2>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+  {% for e in events_sorted %}{% include event-card.html event=e %}{% endfor %}
 </div>

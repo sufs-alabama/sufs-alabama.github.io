@@ -1,10 +1,10 @@
-<div class="gallery">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
   {% for g in site.data.infographics %}{% if g.image %}
-    <figure class="gallery-figure">
-      <button class="gallery-item" data-full="{{ g.image | relative_url }}">
-        <img src="{{ g.image | relative_url }}" alt="{{ g.alt | default: g.title | escape }}" loading="lazy">
+    <figure class="col mb-0">
+      <button type="button" class="gallery-item p-0 border-0 bg-transparent w-100" data-full="{{ g.image | relative_url }}">
+        <img class="img-fluid rounded shadow-sm" src="{{ g.image | relative_url }}" alt="{{ g.alt | default: g.title | escape }}" loading="lazy">
       </button>
-      <figcaption><strong>{{ g.title }}</strong>{% if g.caption %} {{ g.caption }}{% endif %}</figcaption>
+      <figcaption class="small mt-2"><strong>{{ g.title }}</strong>{% if g.caption %} {{ g.caption }}{% endif %}</figcaption>
     </figure>
   {% endif %}{% endfor %}
 </div>

@@ -1,13 +1,11 @@
 ---
 layout: default
 ---
-<header class="page-hero">
-  <div class="wrap">
-    {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
-    <h1 class="page-title">{{ page.title }}</h1>
-    {% if page.lede %}<p class="page-lede">{{ page.lede }}</p>{% endif %}
-  </div>
-</header>
-<div class="wrap page-body{% if page.prose %} prose{% endif %}">
-  {{ content }}
+<div class="container py-5">
+  <header class="mb-4 mb-lg-5">
+    {% if page.eyebrow %}<p class="text-uppercase fw-bold small text-sufs-red mb-2">{{ page.eyebrow }}</p>{% endif %}
+    <h1 class="display-4 fw-bold">{{ page.title }}</h1>
+    {% if page.lede %}<p class="lead col-xl-10 text-body-secondary">{{ page.lede }}</p>{% endif %}
+  </header>
+  {% if page.prose %}<div class="col-xl-10">{{ content }}</div>{% else %}{{ content }}{% endif %}
 </div>

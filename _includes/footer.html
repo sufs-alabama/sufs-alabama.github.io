@@ -1,18 +1,19 @@
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <div class="footer-brand">
-      <a class="logo" href="{{ '/' | relative_url }}">{% include logo.html %}<span class="sr-only">{{ site.title }} home</span></a>
-      <p>An Alabama chapter of the <a href="{{ site.national_site }}" target="_blank" rel="noopener">Stand Up for Science</a> movement.</p>
+<footer class="bg-dark text-white py-5 mt-auto" data-bs-theme="dark">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-md-5">
+        <a class="d-inline-block mb-3" href="{{ '/' | relative_url }}">{% include logo.html %}<span class="visually-hidden">{{ site.title }} home</span></a>
+        <p class="mb-0">An Alabama chapter of the <a class="link-light" href="{{ site.national_site }}" target="_blank" rel="noopener">Stand Up for Science</a> movement.</p>
+      </div>
+      <nav class="col-6 col-md-3" aria-label="Footer">
+        <ul class="nav flex-column fw-bold">
+          {% include nav-items.html %}
+        </ul>
+      </nav>
+      <div class="col-6 col-md-4 d-flex justify-content-md-end">
+        {% include social.html dark=true %}
+      </div>
     </div>
-    <nav class="footer-links" aria-label="Footer">
-      <a href="{{ '/who-we-are/' | relative_url }}">Who We Are</a>
-      <a href="{{ '/events/' | relative_url }}">Events</a>
-      <a href="{{ '/media/' | relative_url }}">Media</a>
-      <a href="{{ '/contact/' | relative_url }}">Contact</a>
-      {% assign graphics = site.data.infographics | where_exp: "g", "g.image" %}
-      {% if graphics.size > 0 %}<a href="{{ '/infographics/' | relative_url }}">Infographics</a>{% endif %}
-    </nav>
-    {% include social.html class="social-footer" %}
+    <p class="small text-white-50 mt-4 mb-0">© {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </div>
-  <p class="wrap copyright">© {{ site.time | date: "%Y" }} {{ site.title }}</p>
 </footer>

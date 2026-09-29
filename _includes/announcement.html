@@ -1,8 +1,8 @@
 {% if site.announcement and site.announcement != "" %}
-<aside class="announcement" id="announcement" aria-label="Announcement" data-message="{{ site.announcement | slugify }}">
-  <div class="wrap announcement-inner">
-    {% if site.announcement_link %}<a href="{{ site.announcement_link | relative_url }}"{% if site.announcement_link contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ site.announcement }}</a>{% else %}<span>{{ site.announcement }}</span>{% endif %}
-    <button class="announcement-close" aria-label="Dismiss announcement">×</button>
+<aside class="announcement bg-sufs-red text-white" id="announcement" aria-label="Announcement" data-message="{{ site.announcement | slugify }}">
+  <div class="container position-relative text-center py-2 px-5">
+    {% if site.announcement_link %}<a class="link-light link-underline-opacity-0 link-underline-opacity-100-hover fw-semibold" href="{{ site.announcement_link | relative_url }}"{% if site.announcement_link contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ site.announcement }}</a>{% else %}<span class="fw-semibold">{{ site.announcement }}</span>{% endif %}
+    <button type="button" class="btn-close btn-close-white position-absolute end-0 top-50 translate-middle-y me-3" aria-label="Dismiss announcement"></button>
   </div>
 </aside>
 {% endif %}
