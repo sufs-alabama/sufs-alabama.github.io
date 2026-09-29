@@ -8,8 +8,8 @@
   {% endif %}
   <div class="media-body">
     <p class="media-outlet">{{ m.outlet }} <span>· {% if m.date_display %}{{ m.date_display }}{% else %}{{ m.date | date: "%B %-d, %Y" }}{% endif %}</span></p>
-    <h3><a href="{{ m.url }}" target="_blank" rel="noopener">{{ m.title }}</a></h3>
+    <h3>{{ m.title }}</h3>
     {% if m.summary %}<p>{{ m.summary }}</p>{% endif %}
-    <a class="text-link" href="{{ m.url }}" target="_blank" rel="noopener">{% if m.type == "video" %}Watch{% else %}Read{% endif %} ↗</a>
+    <a class="text-link" href="{{ m.url }}" target="_blank" rel="noopener">{% if m.type == "video" %}Watch{% else %}Read{% endif %}<span class="sr-only"> “{{ m.title }}” on {{ m.outlet }} (opens in a new tab)</span> ↗</a>
   </div>
 </article>

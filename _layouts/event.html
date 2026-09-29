@@ -8,7 +8,7 @@ layout: default
       <a class="back-link" href="{{ '/events/' | relative_url }}">← All events</a>
       <p><span class="tag tag-{{ cat.color }}">{{ cat.label }}</span>{% if page.upcoming %} <span class="tag tag-outline">Upcoming</span>{% endif %}</p>
       <h1 class="page-title">{{ page.title }}</h1>
-      <p class="event-meta">{% include event-date.html event=page %} · {% include event-place.html event=page %}</p>
+      <p class="event-meta"><span class="meta-line">{% include event-date.html event=page %}</span><span class="meta-line">{% include event-place.html event=page %}</span></p>
     </div>
   </header>
   <div class="wrap event-page-body">

@@ -28,13 +28,13 @@ social:
   bluesky: ""
   facebook: ""
   tiktok: ""
-  linktree: "https://linktr.ee/standupforsciencealabama"
+  linktree: ""
   github: "https://github.com/sufs-alabama"
 national_site: "https://www.standupforscience.net/"
 
 # Call-to-action button in the header
 header_cta_label: "Get Involved"
-header_cta_link: "https://linktr.ee/standupforsciencealabama"
+header_cta_link: "/contact/"
 
 # Show upcoming (future-dated) events like the 2026 meetup
 future: true

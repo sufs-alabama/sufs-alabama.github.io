@@ -8,9 +8,9 @@
   {% endif %}
   <div class="event-body">
     <p class="event-tags"><span class="tag tag-{{ cat.color }}">{{ cat.label }}</span>{% if e.upcoming %} <span class="tag tag-outline">Upcoming</span>{% endif %}</p>
-    <h3><a href="{{ e.url | relative_url }}">{{ e.title }}</a></h3>
-    <p class="event-meta">{% include event-date.html event=e %} · {% include event-place.html event=e %}</p>
+    <h3>{{ e.title }}</h3>
+    <p class="event-meta"><span class="meta-line">{% include event-date.html event=e %}</span><span class="meta-line">{% include event-place.html event=e %}</span></p>
     <p>{{ e.summary }}</p>
-    <a class="text-link" href="{{ e.url | relative_url }}">{% if e.upcoming %}Details{% else %}Read more{% endif %} →</a>
+    <a class="text-link" href="{{ e.url | relative_url }}">{% if e.upcoming %}Details{% else %}Read more{% endif %}<span class="sr-only"> about {{ e.title }}</span> →</a>
   </div>
 </article>
