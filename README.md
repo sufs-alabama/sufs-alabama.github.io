@@ -15,7 +15,7 @@ The site rebuilds automatically in a minute or two.
 | An event | the matching file in `_events/` |
 | Press coverage on the Media page | `_data/media.yml` |
 | Contact form text | `contact.html` |
-| The infographics gallery | `_data/infographics.yml` + images in `assets/img/infographics/` |
+| Infographics on the Resources page | `_data/infographics.yml` + images in `assets/img/infographics/` |
 | Home page text | `index.html` |
 
 Look for `[brackets]` and `TODO` comments. Those are placeholders waiting for real details.
@@ -63,7 +63,7 @@ Upload the image to `assets/img/infographics/`, then add it to `_data/infographi
   alt: Describe what the graphic shows
   caption: Shared for the March rally.
 ```
-Delete the three "Your infographic here" placeholder entries once real ones are in.
+They appear on the Resources page (`/resources/`), newest first.
 
 ## Contact form
 

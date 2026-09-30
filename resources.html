@@ -1,0 +1,18 @@
+---
+permalink: /resources/
+title: Resources
+eyebrow: Save them, share them
+lede: Infographics and materials from Stand Up for Science Alabama to save and share.
+---
+{% assign graphics = site.data.infographics | where_exp: "g", "g.image" %}
+<h2 class="fw-bold mb-4">Infographics</h2>
+{% if graphics.size > 0 %}
+  {% include gallery.html %}
+  {% include lightbox.html %}
+{% else %}
+  <div class="card border-0 shadow-sm">
+    <div class="card-body p-4">
+      <p class="mb-0">We'll be sharing our infographics here soon. In the meantime, find our latest graphics on <a href="{{ site.social.instagram }}" target="_blank" rel="noopener">Instagram</a>.</p>
+    </div>
+  </div>
+{% endif %}

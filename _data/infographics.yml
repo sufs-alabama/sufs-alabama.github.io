@@ -1,5 +1,5 @@
-# Your infographics gallery. The Infographics page and its menu link stay
-# hidden until at least one entry with an `image` is added here.
+# Infographics shown on the Resources page (/resources/). Until an entry with
+# an `image` is added, the page shows a short "coming soon" note.
 # 1. Put the image in assets/img/infographics/
 # 2. Add an entry (newest first), removing the [] below:
 #

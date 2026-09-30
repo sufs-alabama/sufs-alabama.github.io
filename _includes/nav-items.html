@@ -1,6 +1,5 @@
-{%- assign graphics = site.data.infographics | where_exp: "g", "g.image" -%}
 <li class="nav-item"><a class="nav-link{% if page.url == '/who-we-are/' %} active{% endif %}" href="{{ '/who-we-are/' | relative_url }}"{% if page.url == '/who-we-are/' %} aria-current="page"{% endif %}>Who We Are</a></li>
 <li class="nav-item"><a class="nav-link{% if page.url contains '/events/' %} active{% endif %}" href="{{ '/events/' | relative_url }}"{% if page.url contains '/events/' %} aria-current="page"{% endif %}>Events</a></li>
 <li class="nav-item"><a class="nav-link{% if page.url == '/media/' %} active{% endif %}" href="{{ '/media/' | relative_url }}"{% if page.url == '/media/' %} aria-current="page"{% endif %}>Media</a></li>
+<li class="nav-item"><a class="nav-link{% if page.url == '/resources/' %} active{% endif %}" href="{{ '/resources/' | relative_url }}"{% if page.url == '/resources/' %} aria-current="page"{% endif %}>Resources</a></li>
 <li class="nav-item"><a class="nav-link{% if page.url contains '/contact/' %} active{% endif %}" href="{{ '/contact/' | relative_url }}"{% if page.url contains '/contact/' %} aria-current="page"{% endif %}>Contact</a></li>
-{% if graphics.size > 0 %}<li class="nav-item"><a class="nav-link{% if page.url == '/infographics/' %} active{% endif %}" href="{{ '/infographics/' | relative_url }}"{% if page.url == '/infographics/' %} aria-current="page"{% endif %}>Infographics</a></li>{% endif %}
