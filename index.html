@@ -46,7 +46,7 @@ title: Home
 
 <section class="container py-5">
   <div class="row g-4">
-    <div class="col-lg-5"><h2 class="display-6 fw-bold">Who we are</h2></div>
+    <div class="col-lg-5"><h2 class="fw-bold">Who we are</h2></div>
     <div class="col-lg-7">
       <p class="fs-4 fw-semibold">
         We're the Alabama arm of <strong class="text-sufs-red">Stand Up for Science</strong>, a national grassroots
@@ -61,10 +61,10 @@ title: Home
   </div>
 </section>
 
-<section class="bg-sufs-tint py-5">
+<section class="py-5">
   <div class="container">
     <div class="d-flex flex-wrap align-items-baseline justify-content-between gap-2 mb-4">
-      <h2 class="display-6 fw-bold mb-0">Events</h2>
+      <h2 class="fw-bold mb-0">Events</h2>
       <a class="fw-bold" href="{{ '/events/' | relative_url }}">All events →</a>
     </div>
     <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -76,7 +76,7 @@ title: Home
 
 <section class="container py-5">
   <div class="d-flex flex-wrap align-items-baseline justify-content-between gap-2 mb-4">
-    <h2 class="display-6 fw-bold mb-0">In the news</h2>
+    <h2 class="fw-bold mb-0">In the news</h2>
     <a class="fw-bold" href="{{ '/media/' | relative_url }}">All media →</a>
   </div>
   {% assign press = site.data.media | sort: "date" | reverse | where_exp: "m", "m.type != 'video'" %}
@@ -87,7 +87,7 @@ title: Home
 
 <section class="bg-sufs-red text-white py-5" id="get-involved">
   <div class="container py-lg-4">
-    <h2 class="display-6 fw-bold mb-4">Science needs you.<br>Alabama needs science.</h2>
+    <h2 class="fw-bold mb-4">Science needs you.<br>Alabama needs science.</h2>
     <div class="d-flex flex-wrap gap-3">
       <a class="btn btn-light" href="{{ '/contact/' | relative_url }}">Contact us</a>
       <a class="btn btn-outline-light" href="{{ '/events/' | relative_url }}">Come to an event</a>

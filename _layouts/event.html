@@ -11,7 +11,7 @@ layout: default
     {% if page.image %}
       <button type="button" class="gallery-item event-flyer d-block mx-auto mb-4 p-0 border-0 bg-transparent" data-full="{{ page.image | relative_url }}"><img class="img-fluid rounded shadow-sm" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}"></button>
     {% endif %}
-    <div class="prose">{{ content }}</div>
+    {{ content }}
     {% if page.event_link %}<p><a class="btn btn-outline-dark" href="{{ page.event_link }}" target="_blank" rel="noopener">Event listing ↗</a></p>{% endif %}
     {% if page.rsvp_link and page.rsvp_link != "" %}<p><a class="btn btn-primary" href="{{ page.rsvp_link }}">RSVP</a></p>{% endif %}
   </div>

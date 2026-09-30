@@ -10,7 +10,6 @@
   --sufs-red-text: #b8212a;  /* red text on light backgrounds (AA) */
   --sufs-navy: #0f3b52;
   --sufs-cream: #f3efe8;
-  --sufs-tint: #ece5da;
 
   --bs-body-font-family: "League Spartan", system-ui, -apple-system, "Segoe UI", sans-serif;
   --bs-body-bg: var(--sufs-cream);
@@ -22,6 +21,10 @@
   --bs-link-hover-color-rgb: 143, 26, 32;
 }
 
+/* White cards on the cream page */
+.card { --bs-card-bg: #fff; }
+.form-control, .form-select, .form-check-input:not(:checked) { background-color: #fff; }
+
 body { min-height: 100vh; display: flex; flex-direction: column; }
 main { flex: 1 0 auto; }
 h1, h2, h3, h4, .display-4, .display-5, .display-6 { letter-spacing: -.02em; text-wrap: balance; }
@@ -29,7 +32,6 @@ h1, h2, h3, h4, .display-4, .display-5, .display-6 { letter-spacing: -.02em; tex
 /* Brand colors */
 .bg-sufs-red { background-color: var(--sufs-red) !important; }
 .bg-sufs-navy { background-color: var(--sufs-navy) !important; }
-.bg-sufs-tint { background-color: var(--sufs-tint) !important; }
 .text-sufs-red { color: var(--sufs-red-text) !important; }
 .bg-sufs-navy .text-sufs-red, .bg-sufs-red .text-sufs-red { color: #fff !important; }
 
