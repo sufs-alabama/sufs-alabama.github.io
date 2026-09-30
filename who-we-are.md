@@ -42,6 +42,6 @@ Copy one <div class="col">…</div> per person.
 {% endcomment %}
 
 <div class="col-xl-10 mt-5">
-  <h2 class="fw-bold">Get involved</h2>
+  <h2 class="fw-bold mb-4">Get involved</h2>
   <p>Come to an <a href="{{ '/events/' | relative_url }}">event</a>, <a href="{{ '/contact/' | relative_url }}">get in touch</a>, or connect with the <a href="{{ site.national_site }}" target="_blank" rel="noopener">national movement</a>.</p>
 </div>

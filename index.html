@@ -5,7 +5,8 @@ title: Home
 {% assign events_sorted = site.events | sort: "date" | reverse %}
 {% assign next = site.events | where: "upcoming", true | sort: "date" | first %}
 
-<section class="container py-5">
+<section class="py-5">
+  <div class="container">
   <div class="row g-4 g-lg-5 align-items-center py-lg-4">
     <div class="col-lg-6">
       <h1 class="display-4 fw-bold">
@@ -29,6 +30,7 @@ title: Home
       </a>
     </div>
   </div>
+  </div>
 </section>
 
 {% if next %}
@@ -44,9 +46,10 @@ title: Home
 </section>
 {% endif %}
 
-<section class="container py-5">
+<section class="py-5">
+  <div class="container">
   <div class="row g-4">
-    <div class="col-lg-5"><h2 class="fw-bold">Who we are</h2></div>
+    <div class="col-lg-5"><h2 class="fw-bold mb-4">Who we are</h2></div>
     <div class="col-lg-7">
       <p class="fs-4 fw-semibold">
         We're the Alabama arm of <strong class="text-sufs-red">Stand Up for Science</strong>, a national grassroots
@@ -58,6 +61,7 @@ title: Home
       </p>
       <a class="btn btn-outline-dark" href="{{ '/who-we-are/' | relative_url }}">Meet the chapter</a>
     </div>
+  </div>
   </div>
 </section>
 
@@ -74,7 +78,8 @@ title: Home
   </div>
 </section>
 
-<section class="container py-5">
+<section class="py-5">
+  <div class="container">
   <div class="d-flex flex-wrap align-items-baseline justify-content-between gap-2 mb-4">
     <h2 class="fw-bold mb-0">In the news</h2>
     <a class="fw-bold" href="{{ '/media/' | relative_url }}">All media →</a>
@@ -82,6 +87,7 @@ title: Home
   {% assign press = site.data.media | sort: "date" | reverse | where_exp: "m", "m.type != 'video'" %}
   <div class="row row-cols-1 row-cols-md-3 g-4">
     {% for m in press limit: 3 %}{% include media-item.html item=m %}{% endfor %}
+  </div>
   </div>
 </section>
 

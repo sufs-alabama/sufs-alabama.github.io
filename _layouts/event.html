@@ -4,7 +4,7 @@ layout: default
 {% assign cat = site.data.categories[page.category] %}
 <article class="container py-5">
   <div class="col-xl-10">
-    <a class="d-inline-block mb-3 fw-semibold" href="{{ '/events/' | relative_url }}">← All events</a>
+    <a class="d-inline-block mb-3 fw-bold" href="{{ '/events/' | relative_url }}">← All events</a>
     <p class="mb-2"><span class="badge badge-{{ cat.color }}">{{ cat.label }}</span>{% if page.upcoming %} <span class="badge text-bg-light border">Upcoming</span>{% endif %}</p>
     <h1 class="display-5 fw-bold">{{ page.title }}</h1>
     <p class="fw-semibold text-body-secondary mb-4"><span class="d-block">{% include event-date.html event=page %}</span><span class="d-block">{% include event-place.html event=page %}</span></p>

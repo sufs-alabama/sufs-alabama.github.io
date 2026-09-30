@@ -3,13 +3,13 @@
 <div class="col event-item" data-category="{{ e.category }}">
   <article class="card h-100 border-0 shadow-sm">
     {% if e.image %}<img class="card-img-top event-img" src="{{ e.image | relative_url }}" alt="" loading="lazy">{% endif %}
-    <div class="card-body">
+    <div class="card-body p-4 pb-3">
       <p class="mb-2"><span class="badge badge-{{ cat.color }}">{{ cat.label }}</span>{% if e.upcoming %} <span class="badge text-bg-light border">Upcoming</span>{% endif %}</p>
       <h3 class="h5 card-title fw-bold">{{ e.title }}</h3>
       <p class="small text-body-secondary fw-semibold mb-2"><span class="d-block">{% include event-date.html event=e %}</span><span class="d-block">{% include event-place.html event=e %}</span></p>
       <p class="card-text">{{ e.summary }}</p>
     </div>
-    <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+    <div class="card-footer bg-transparent border-0 px-4 pt-0 pb-4">
       <a class="fw-bold" href="{{ e.url | relative_url }}">{% if e.upcoming %}Details{% else %}Read more{% endif %}<span class="visually-hidden"> about {{ e.title }}</span> →</a>
     </div>
   </article>

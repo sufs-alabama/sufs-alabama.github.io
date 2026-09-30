@@ -6,12 +6,12 @@
         <iframe class="rounded-top" src="https://www.youtube-nocookie.com/embed/{{ m.youtube_id }}" title="{{ m.outlet | escape }}: {{ m.title | escape }}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     {% endif %}
-    <div class="card-body">
+    <div class="card-body p-4 pb-3">
       <p class="small fw-bold text-uppercase text-sufs-red mb-2">{{ m.outlet }} <span class="text-body-secondary">· {% if m.date_display %}{{ m.date_display }}{% else %}{{ m.date | date: "%B %-d, %Y" }}{% endif %}</span></p>
       <h3 class="h5 card-title fw-bold">{{ m.title }}</h3>
       {% if m.summary %}<p class="card-text">{{ m.summary }}</p>{% endif %}
     </div>
-    <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+    <div class="card-footer bg-transparent border-0 px-4 pt-0 pb-4">
       <a class="fw-bold" href="{{ m.url }}" target="_blank" rel="noopener">{% if m.type == "video" %}Watch{% else %}Read{% endif %}<span class="visually-hidden"> “{{ m.title }}” on {{ m.outlet }} (opens in a new tab)</span> ↗</a>
     </div>
   </article>
